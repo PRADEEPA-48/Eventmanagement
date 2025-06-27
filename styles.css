@@ -1,0 +1,306 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background-color:#e5f4e3;
+
+}
+ 
+.homepage{
+    background-image:url(homepage1.jpg);
+    background-size: cover;
+    background-position: center;
+    height:90vh;
+    position: relative;
+    color:white;
+    text-align: center;
+    
+}
+
+
+
+.homepage h2{
+    font-size: 30px;
+    font-weight: 300;
+    font-family: cursive;
+}
+
+.homepage h1{
+    font-size: 60px;
+    font-weight: bold;
+    font-family: cursive;
+}
+
+.about-btn{
+    padding:10px 20px;
+    margin:5px;
+    border:none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+     background: #ffc837;
+}
+
+
+img{
+    height: 100px;
+    width: 200px;
+    float: left;
+}
+.lo{
+    background-color: black;
+    height: 100px;
+    width: 300;
+    
+}
+
+
+nav{
+    float: right;
+    margin-top: 50px;
+    margin-right: 15px;
+    
+}
+a{
+    color: rgb(190, 190,190);
+    
+}
+.event{
+    margin-top: 50px;
+}
+
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+.image{
+    display: flex;
+}
+
+.container2 {
+  display: flex;
+  gap: 20px;
+}
+
+
+.form1{
+    background-color:rgba(0,0,0,0.1) ;
+    padding: 30px;
+    border-radius: 10px;
+    width:90%;
+    max-width: 500px;
+}
+
+.form1>h2{
+    text-align: center;
+    color:#fff;
+}
+
+form{
+    display: flex;
+    flex-direction:column;
+
+}
+
+input,select,textarea{
+    margin: 10px 0;
+    padding:10px;
+    border: 1px solid rgb(222, 133, 133);
+    border-radius: 5px;
+    background:rgb(140, 204, 140);
+    color:white
+
+}
+
+button{
+    background: #b2efb2;
+    color:black;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover{
+    background:#9fef9f;
+
+}
+
+.cont{
+    width:90%;
+    max-width: 1100;
+    margin: 40px auto;
+    background-color: #fff;
+    padding:20px 30px;
+    box-shadow: 0 0 10px  rgba(0,0,0,0.7);
+}
+
+.cont>h2{
+    color:#222;
+
+}
+
+.contform,.info{
+    flex:1 1 45%;
+
+}
+
+.contform h3,.info h3{
+    margin-bottom: 15px;
+
+}
+
+form input,form textarea{
+    width:48%;
+    padding:10px;
+    margin:5px 1%
+    box-sizing:border-box;
+    font-size:14px;
+}
+
+
+form textarea{
+    width:98%;
+    height: 100px;
+    resize:none;
+
+}
+
+form button{
+     background-color: rgb(222, 133, 133);
+    color: lightcyan;
+    padding: 10px 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+
+}
+
+form button:hover {
+    background-color: rgb(249, 208, 208);
+}
+
+.info{
+    background-color: lightcyan;
+    text-align: center;
+}
+.info p {
+    margin: 10px 0;
+    font-size: 15px;
+   
+}
+
+
+.info a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+
+
+    .album-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .album-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .album-grid div {
+      background: #9fef9f ;
+       border: 1px solid rgb(222, 133, 133);
+      padding: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .album-grid div:hover {
+      transform: scale(1.05);
+    }
+
+  
+    .gallery-section {
+      display: none;
+      padding: 40px 20px;
+      background:#e5f4e3;
+    }
+
+    .gallery-section.active {
+      display: block;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .back-btn {
+      background: #f05454;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    .back-btn:hover {
+      background: #d94343;
+    }
+
+
+
+    .offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+
+.offer-card {
+  background: rgb(254, 209, 209);
+  padding: 20px;
+  border-left: 5px solid #c0d1ea;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+  transition: transform 0.3s;
+  width: 70%;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

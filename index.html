@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spark Event Management</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="lo">
+    <div id="ve">
+    <img src="Picsart_25-06-13_11-57-45-513.jpg">
+    
+    </div>
+    <h4 class="Management">
+    <div class="logo">
+    <nav id="event" >
+      <a href="#h">Home</a>
+      <a href="#a">About Us</a>
+       <a href="#s">Service</a>
+       <a href="#g">Gallery</a>
+       <a href="#o">Offers</a>
+      <a href="#b">Booking</a>
+      <a href="#c">Contact</a>
+      
+    </nav>
+    </div>
+
+  </h4>
+    </div>
+    <div id="h">
+      <h2>台</h2>
+         
+      <section class="homepage">
+        <div>
+          <h2>One Stop</h2>
+          <h1>Event Planner</h1>
+          <p>EVERY EVENT SHOULD BE PERFECT</p>
+
+          <h1 >SPARK FOTOGRAPHY </h1>
+          <h2>Event MANAGEMENT</h2>
+
+         
+        </div>
+      </section>
+
+    </div>
+  <hr>
+  <div id="a">
+<h2>About Us</h2>
+    <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Welcome to <br>Spark Fotography Event Management</h1>
+  <div class="image">
+        <p style="margin-right: 10px;">Spark Fotography Event Management work with you to deliver your events anywhere around the Coimbatore,chennai, offering the highest standards, attention to detail and a flexible and consultative approach providing as little or as much help as you need to support you fully for your important event. Our aim is to create each event that energize and recharge your family members, resulting in greater productivity and success.
+      <br>
+      <br>
+         We plan each event after getting proper understanding from your organization, budgets, ethos and requirements. Each of our events come with a combination of special programs like air bubbles, balloon decoration, popcorn & candy, ending gifts, D.J, magic show, game show, orchestra, welcome girls, interior decors, vegetable carving, tattoos, live art, mehandi, mickey mouse, surprise gifts and jumping balloon
+    </p> 
+    <img src="sample 5.jpg" style="height: 200px; width: 100%; margin-right: 5px;">
+</div>
+</div>
+<hr>
+
+<div id="s">
+   <h2>Services</h2>
+
+   <h1 >Birthday Party Organizer</h1>
+    <p style="color: rgb(246, 149, 149); font-size: large;"><b>Looking for the best Birthday Party Ideas..? We're top planners in Coimbatore and Chennai.</b></p>
+
+    <p>Our team makes your birthday unforgettable with customized themes, delicious cakes, and fun entertainment across Tamil Nadu.</p>
+   
+      <div class="container">
+          <div class="item"><img src="bithday sample 1.jpg"></div>
+          <div class="item"><img src ="bsample 2.jpg"></div>
+          <div class="item"><img src= "b sample 4.jpg"> </div>
+
+    </div>
+
+    
+    
+   <h1>Marriage Organizer</h1>
+
+   <p style="color: rgb(246, 149, 149); font-size: large;"><b>Make your wedding memorable with Spark Fotography Event Management!</b></p>
+  
+
+   <P><p>From planning to execution, we handle everything with perfection, offering personalized themes and managing guests. Available throughout Tamil Nadu.</p>
+   </div>
+   
+         <div class="container2">
+             <div class="item"><img src="sample 6.jpg"></div>
+             <div class="item"><img src ="sample 2.jpg"></div>
+             <div class="item"><img src= "sample 4.jpg"> </div>
+         </div>
+
+
+       
+   <hr>
+
+   <div id="g">
+    <h2>Gallery</h2>
+  
+  
+<section class="album-section" id="albumSelector">
+  <h1>📸 Select an Album</h1>
+  <div class="album-grid">
+    <div onclick="showAlbum('birthday')">🎂 Birthday Album</div>
+    <div onclick="showAlbum('marriage')">💍 Marriage Album</div>
+    <div onclick="showAlbum('catering')">🍲 Catering Album</div>
+    <div onclick="showAlbum('photography')">📷 Photography Album</div>
+    
+  </div>
+</section>
+
+
+
+<section id="birthday" class="gallery-section">
+  <button class="back-btn" onclick="goBack()">← Back to Albums</button>
+  <h2>Birthday Album</h2>
+  <div class="gallery-grid">
+    <img src="b1.webp">           
+      
+
+
+
+
+
+        <img src="b2.webp">
+    <img src="b3.webp">
+    <img src="b4.webp">
+  </div>
+</section>
+
+<section id="marriage" class="gallery-section">
+  <button class="back-btn" onclick="goBack()">← Back to Albums</button>
+  <h2>Marriage Album</h2>
+  <div class="gallery-grid">
+    <img src="th (6).jpg">
+    <img src="th (1).jpg">
+    <img src="th (2).jpg">
+    <img src="th (4).jpg">
+  </div>
+</section>
+
+<section id="catering" class="gallery-section">
+  <button class="back-btn" onclick="goBack()">← Back to Albums</button>
+  <h2>Catering Album</h2>
+  <div class="gallery-grid">
+    <img src="c1.webp">
+    <img src="c2.webp">
+    <img src="c3.webp">
+    <img src="c4.webp">
+  </div>
+</section>
+
+<section id="photography" class="gallery-section">
+  <button class="back-btn" onclick="goBack()">← Back to Albums</button>
+  <h2>Photography Album</h2>
+  <div class="gallery-grid">
+    <img src="p4.webp">
+    <img src="p3.webp">
+    <img src="p2.webp">
+    <img src="p1.webp">
+  </div>
+</section>
+
+  <script>
+  function showAlbum(id) {
+    document.getElementById("albumSelector").style.display = "none";
+    document.querySelectorAll(".gallery-section").forEach(section => {
+      section.classList.remove("active");
+    });
+    document.getElementById(id).classList.add("active");
+  }
+
+  function goBack() {
+    document.getElementById("albumSelector").style.display = "block";
+    document.querySelectorAll(".gallery-section").forEach(section => {
+      section.classList.remove("active");
+    });
+  }
+</script>
+<hr>
+
+<div id="o">
+
+  <h2>Offers</h2>
+
+<div class="text-center mb-4">
+      <button class="btn btn-primary me-2" onclick="filterOffers('all')">All</button>
+      <button class="btn btn-success me-2" onclick="filterOffers('birthday')">Birthday</button>
+      <button class="btn btn-warning me-2" onclick="filterOffers('wedding')">Wedding</button>
+      <button class="btn btn-info me-2" onclick="filterOffers('corporate')">Corporate</button>
+    </div>
+
+   
+    <div class="offers-grid">
+      <div class="offer-card birthday">
+        <h4>Birthday Package</h4>
+        <p>Includes cake, decorations, games & photography. ₹9,999 only!</p>
+      </div>
+      <div class="offer-card wedding">
+        <h4>Wedding Package</h4>
+        <p>Full wedding planning,photoshoot,pre weddingphotoshoot,drone,video shoot, decor, catering & DJ. ₹69,999 only!</p>
+      </div>
+      <div class="offer-card corporate">
+        <h4>Corporate Event</h4>
+        <p>Projector, stage, catering & gift bags. ₹29,999 only!</p>
+      </div>
+      <div class="offer-card birthday">
+        <h4>Kids Birthday Deluxe</h4>
+        <p>Themed decoration, magic show, and return gifts. ₹14,999 only!</p>
+      </div>
+    </div>
+  </div>
+
+ </div>
+  
+  
+
+<script>
+  function filterOffers(category) {
+  const cards = document.querySelectorAll('.offer-card');
+  cards.forEach(card => {
+    if (category === 'all' || card.classList.contains(category)) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+<hr>
+
+
+ <div id="b">
+    <h2>Booking</h2>
+
+    <div class="form1">
+
+      <h2>Booking Your Events Here</h2>
+      <form>
+        <h3>Name:</h3>
+       <input type="text" name="name" placeholder="Name" required>
+       <br>
+       <h3>Phone Number:</h3>
+       <input type="tel" name="phone" placeholder="Phone Number" required>
+       <br>
+       <h3>Mail ID:</h3>
+       <input type="email" name="email" placeholder="Mail ID" required>
+       <br>
+       <h3>City:</h3>
+       <input type="text" name="city" placeholder="Your City" required>
+       <br>
+       <h3>Event Date: </h3>
+       <input type="date" name="event-date" placeholder="Event Date" required>
+        <br>
+        <br>
+       <select name="service" required>
+        <br>`
+        <option value="">Required Service</option>
+        <option value="Birthday Party">Birthday Party</option>
+
+        <option value="Wedding Planner">Wedding Planner</option>
+
+        <option value="Corporate Event">Corporate Event</option>
+
+       </select>
+       <br>
+       <br>
+       <textarea name="message" placeholder="Message"></textarea>
+                 <br>
+       <button type="submit">Submit</button>
+      </form>
+     </div>
+    
+     <hr>
+
+       <div id="c">
+        <h2>Contact</h2>
+
+        <div  class="cont">
+          <div class="contform">
+            <h3>Send Us a Message</h3>
+
+            <form>
+              <input type="text" name="name" placeholder="Name">
+              <input type="email" name="email" placeholder="E-mail">
+              <input type="phone" name="phone" placeholder="Phone">
+              <input type="city"  name="City" placeholder="City">
+              <textarea name="Remarks" placeholder="Remarks"></textarea>
+
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+           <div class="info">
+
+              <h3>Get in Touch !</h3>
+              <p><strong>🏠 Spark Event Management</strong></p>
+              <p><a href="Location:">Coimbatore,chennai</a></p>
+              <p>📞 <a href="tel:+91 8015207594">+91 80152075</a></p>
+              <p>✉ <a href="mail to:sfeventmanagementservicr.com"></a>sfeventmanagementservicr.com</p>
+
+          </div>
+        </div>
+       </div>
+  </body>
+</html>
