@@ -1,0 +1,550 @@
+/* 🎨 Ultra Creative Styles for Maximum Visual Impact */
+
+/* 🌟 Morphing Background Shapes */
+.morphing-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.morphing-shape {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.1;
+  animation: morphFloat 15s infinite linear;
+}
+
+.morphing-shape.circle {
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--primary-color), transparent);
+}
+
+.morphing-shape.triangle {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--primary-color);
+  background: none;
+}
+
+.morphing-shape.square {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border-radius: 10px;
+}
+
+.morphing-shape.hexagon {
+  width: 60px;
+  height: 34.64px;
+  background: var(--primary-color);
+  position: relative;
+  margin: 17.32px 0;
+}
+
+.morphing-shape.hexagon:before,
+.morphing-shape.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+.morphing-shape.hexagon:before {
+  bottom: 100%;
+  border-bottom: 17.32px solid var(--primary-color);
+}
+
+.morphing-shape.hexagon:after {
+  top: 100%;
+  border-top: 17.32px solid var(--primary-color);
+}
+
+.morphing-shape.star {
+  position: relative;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 18px solid var(--primary-color);
+  transform: rotate(35deg);
+}
+
+.morphing-shape.star:before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: -12px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 18px solid var(--primary-color);
+  transform: rotate(-70deg);
+}
+
+.morphing-shape.star:after {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 3px;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 18px solid var(--primary-color);
+  transform: rotate(70deg);
+}
+
+@keyframes morphFloat {
+  0% {
+    transform: translateY(100vh) rotate(0deg) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  90% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg) scale(1);
+    opacity: 0;
+  }
+}
+
+/* 🎵 Sound Visualizer */
+.sound-visualizer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+.sound-bar {
+  width: 4px;
+  height: 20px;
+  background: var(--theme-gradient);
+  border-radius: 2px;
+  animation: soundPulse 2s infinite ease-in-out;
+  transform-origin: bottom;
+}
+
+@keyframes soundPulse {
+  0%, 100% {
+    height: 20px;
+  }
+  50% {
+    height: 80px;
+  }
+}
+
+/* 🌈 Color Wave */
+.color-wave {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  pointer-events: none;
+  z-index: 999;
+  display: flex;
+}
+
+.wave-dot {
+  width: 1%;
+  height: 10px;
+  background: var(--primary-color);
+  transition: all 0.1s ease;
+}
+
+/* ✨ Sparkle Effects */
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, #fff, transparent);
+  border-radius: 50%;
+  animation: sparkleAnimation 1s ease-out forwards;
+  pointer-events: none;
+  z-index: 10;
+}
+
+@keyframes sparkleAnimation {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5) rotate(180deg);
+    opacity: 0;
+  }
+}
+
+/* 🌟 Constellation Canvas */
+.constellation-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.6;
+}
+
+/* 🎭 Enhanced Navigation */
+.nav-menu {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.nav-link {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-gradient);
+  transition: left 0.5s ease;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.nav-link:hover::before {
+  left: 0;
+}
+
+.nav-link:hover {
+  transform: translateY(-3px) scale(1.05);
+  text-shadow: 0 5px 15px var(--glow-color);
+}
+
+/* 🎪 Enhanced Cards with 3D Effects */
+.offer-card,
+.album-card {
+  transform-style: preserve-3d;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-card::after,
+.album-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
+  opacity: 0;
+  animation: cardRotate 3s linear infinite;
+  z-index: -1;
+}
+
+.offer-card:hover::after,
+.album-card:hover::after {
+  opacity: 0.1;
+}
+
+@keyframes cardRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🎨 Theme Transition Effects */
+.theme-transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-gradient);
+  z-index: 10000;
+  animation: themeTransition 0.6s ease-in-out forwards;
+}
+
+@keyframes themeTransition {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  50% {
+    clip-path: circle(100% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(0% at 50% 50%);
+  }
+}
+
+.theme-preview {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: themePreview 2s ease-out forwards;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+@keyframes themePreview {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* 🎵 Audio Reactive Elements */
+.audio-reactive-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--theme-gradient);
+  z-index: 1001;
+  transform-origin: left;
+  animation: audioBarPulse 0.1s ease-in-out infinite;
+}
+
+@keyframes audioBarPulse {
+  0%, 100% {
+    transform: scaleX(0.5);
+  }
+  50% {
+    transform: scaleX(1);
+  }
+}
+
+.audio-reactive {
+  transition: all 0.1s ease-out;
+}
+
+/* 🌟 Text Reveal Effects */
+h1, h2, h3 {
+  perspective: 1000px;
+}
+
+h1 span, h2 span, h3 span {
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+/* 🎪 Scroll Effects */
+.scroll-rotate {
+  transition: transform 0.1s ease-out;
+}
+
+.scroll-scale {
+  transition: transform 0.1s ease-out;
+}
+
+/* 🎨 Enhanced Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 80%, var(--primary-color) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, var(--accent-color) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, var(--primary-color) 0%, transparent 50%);
+  opacity: 0.1;
+  animation: heroGradientShift 10s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes heroGradientShift {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(180deg);
+  }
+}
+
+/* 🎭 Enhanced Buttons */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transform-style: preserve-3d;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(255,255,255,0.3), transparent);
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover {
+  transform: translateY(-5px) rotateX(10deg);
+  box-shadow: 
+    0 15px 35px var(--glow-color),
+    0 0 50px var(--primary-color);
+}
+
+/* 🌈 Enhanced Theme Switcher */
+.theme-switcher {
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-switcher::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff0080,
+    #00ff80,
+    #8000ff,
+    #ff0080
+  );
+  animation: themeSwatchRotate 3s linear infinite;
+  opacity: 0;
+  z-index: -1;
+}
+
+.theme-switcher:hover::before {
+  opacity: 0.2;
+}
+
+@keyframes themeSwatchRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 📱 Mobile Optimizations */
+@media (max-width: 768px) {
+  .morphing-shapes {
+    display: none; /* Hide complex animations on mobile for performance */
+  }
+  
+  .sound-visualizer {
+    height: 50px;
+  }
+  
+  .sound-bar {
+    width: 3px;
+  }
+  
+  .constellation-canvas {
+    opacity: 0.3;
+  }
+}
+
+/* 🎨 Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .morphing-shape,
+  .sound-bar,
+  .wave-dot,
+  .sparkle,
+  .audio-reactive-bar {
+    animation: none;
+  }
+  
+  .constellation-canvas,
+  .morphing-shapes {
+    display: none;
+  }
+}
+
+/* 🌟 High Performance Mode */
+.performance-mode .morphing-shapes,
+.performance-mode .constellation-canvas,
+.performance-mode .sound-visualizer {
+  display: none;
+}
+
+/* 🎪 Ultra Creative Mode Indicator */
+body::after {
+  content: '🎨 Ultra Creative Mode';
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background: var(--theme-gradient);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  z-index: 9999;
+  opacity: 0.7;
+  animation: creativeModePulse 2s ease-in-out infinite;
+}
+
+@keyframes creativeModePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
